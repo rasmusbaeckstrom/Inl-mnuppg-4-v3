@@ -1,0 +1,83 @@
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
+body {
+  font-family: "Lucida Sans";
+  background-image: url("images/wp2754860-windows-xp-wallpaper-hd-1920x1080.jpg");
+  font-weight: bold;
+}
+
+.trashcan {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  display: inline-block;
+}
+
+.trashcan:hover {
+  color: red;
+  transition: 0.3s;
+  transform: rotateY(180deg);
+}
+
+small {
+  color: red;
+}
+
+#addTodo {
+  color: orange;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#todoInput {
+  font-family: "Lucida Sans";
+  height: 25px;
+  font-size: 18px;
+}
+
+#todoInput:hover {
+  background-color: pink;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+#todoGif {
+  margin-top: 50px;
+  width: 200px;
+}
+
+#todoGif:hover {
+  transition: transform 0.5s;
+  transform: rotate(360deg);
+}
+
+ul {
+  min-width: 500px;
+  max-width: 500px;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  list-style-type: circle;
+  padding-left: 25px;
+}
+
+li:hover {
+  background-color: pink;
+  opacity: 0.8;
+  transition: 0.5s;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+}
