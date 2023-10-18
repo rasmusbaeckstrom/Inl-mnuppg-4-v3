@@ -143,6 +143,7 @@ li {
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
   cursor: pointer;
+  word-wrap: break-word;
 }
 
 li:hover {
