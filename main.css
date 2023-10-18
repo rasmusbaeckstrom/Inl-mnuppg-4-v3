@@ -145,6 +145,10 @@ li {
   cursor: pointer;
 }
 
+li:hover {
+  text-decoration: line-through;
+}
+
 ul {
   padding-inline-start: 0;
 }
