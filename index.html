@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ToDo-list</title>
+    <title>My ToDo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
@@ -14,31 +14,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
   </head>
   <body>
     <div class="content">
-      <header>
-        <img id="todoGif" src="images/giphy.gif" alt="todogif">
-      </header>
-    </div>
-
-    <div class="content">
-      <p>0 completed</p>
-    </div>
-
-    <div class="content">
-      <label for="todoInput">Enter todo:</label>
-        <br/>
-          <input type="text" id="todoInput" name="todo" />
-          <button id="addTodo" class="fa-regular fa-square-plus fa-beat-fade"></class=></button>
-    </div>
-
-    <div class="content">
-      <ul></ul>
-    </div>
-    <div class="content">
-      <small></small>
+      <div class="text-content">
+        <h1>My ToDo</h1>
+        <p>0 completed</p>
+        <label for="todoInput"></label>
+        <input type="text" id="todoInput" name="todo" />
+        <button id="addTodo">OK</button>
+        <div>
+          <small></small>
+          <ul></ul>
+        </div>
+      </div>
     </div>
 
     <script src="main.js"></script>

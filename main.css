@@ -1,83 +1,150 @@
 .content {
-  max-width: 500px;
+  max-width: 450px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+  padding: 15px;
+  animation-name: slideInFadeIn;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-fill-mode: forwards;
+  box-shadow: 0px 0px 5px 2px rgb(158, 158, 158);
+}
+
+.text-content {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInFadeIn {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flash {
+  animation: flash 0.5s ease-in-out 2;
+}
+
+p {
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-family: "Times New Roman";
+  font-size: 52px;
   margin: auto;
 }
 
 .completed {
   text-decoration: line-through;
   color: grey;
+  transition: 0.3s;
 }
 
 body {
-  font-family: "Lucida Sans";
-  background-image: url("images/wp2754860-windows-xp-wallpaper-hd-1920x1080.jpg");
-  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(rgb(255, 183, 183), rgb(255, 116, 116));
+  height: 100vh;
 }
 
 .trashcan {
   margin-left: 10px;
   cursor: pointer;
-  font-size: 22px;
-  display: inline-block;
-}
-
-.trashcan:hover {
-  color: red;
-  transition: 0.3s;
-  transform: rotateY(180deg);
 }
 
 small {
   color: red;
+  font-style: italic;
+  font-size: 16px;
 }
 
 #addTodo {
-  color: orange;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#todoInput {
-  font-family: "Lucida Sans";
-  height: 25px;
+  width: 46px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid black;
   font-size: 18px;
 }
 
-#todoInput:hover {
-  background-color: pink;
-  opacity: 0.8;
-  transition: 0.5s;
+#addTodo:hover {
+  background-color: lightgray;
 }
 
-#todoGif {
-  margin-top: 50px;
-  width: 200px;
+#todoInput {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  height: 32px;
 }
 
-#todoGif:hover {
-  transition: transform 0.5s;
-  transform: rotate(360deg);
-}
-
-ul {
-  min-width: 500px;
-  max-width: 500px;
-  word-wrap: break-word;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  list-style-type: circle;
-  padding-left: 25px;
-}
-
-li:hover {
-  background-color: pink;
-  opacity: 0.8;
-  transition: 0.5s;
-  width: fit-content;
+input[type="text"] {
+  width: 220px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  -webkit-transition: 0.5s;
+  transition: none;
+  outline: none;
   border-radius: 5px;
 }
 
-p {
-  color: white;
-  font-size: 20px;
+input[type="text"]:focus {
+  border: 2px solid blue;
+}
+
+li {
+  padding-top: 15px;
+  list-style: none;
+  font-size: 22px;
+  animation-name: fadeInBottom;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+ul {
+  padding-inline-start: 0;
 }

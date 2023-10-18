@@ -29,7 +29,11 @@ button.addEventListener("click", function () {
 
   // Check that text is not empty. If so, display error msg
   if (text.length == 0) {
-    info.innerText = "Error: Input field must not be empty";
+    info.innerText = "Input must not be empty";
+    info.classList.add("flash");
+    setTimeout(() => {
+      info.classList.remove("flash");
+    }, 3000);
     return;
   } else {
     info.innerText = "";
